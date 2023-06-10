@@ -11,7 +11,43 @@ const vegetables = vegetablesData.vegetables
 
 const limit = 10
 
-// Main endpoint
+app.get('/', function(req,res){
+    res.send(`<html>
+    <head>
+      <style>
+        body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          font-family:'Inter', sans-serif;
+          color: #efefef;
+          background-color:#0a0a0a;
+          overflow: hidden;
+        }
+        h1, h2 {
+            text-align:center;
+        }
+        a {
+            color:red;
+            background-color:#efefef;
+            padding: 5px 8px;
+            text-decoration:none;
+            border-radius: 8px;
+        }
+        a:hover {
+            color:#efefef;
+            background-color:red;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Hey! <br/><br/> Thanks for testing this Api <br/><br/> If you haven't → <a href="/api">Test</a> <br/><br/> Feedbacks are appreciated!</h1>
+    </body>
+    </html>`)
+})
+
+// Api endpoint
 app.get("/api", function (req, res) {
   var messages = [
     {

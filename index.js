@@ -15,12 +15,13 @@ app.get('/', function(req,res){
     res.send(`<html>
     <head>
       <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
         body {
           display: flex;
           align-items: center;
           justify-content: center;
           height: 100vh;
-          font-family:'Inter', sans-serif;
+          font-family:'BM Mono', monospace;
           color: #efefef;
           background-color:#0a0a0a;
           overflow: hidden;
